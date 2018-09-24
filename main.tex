@@ -1,0 +1,356 @@
+\documentclass[english]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{40pt} 
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xspace}
+\usepackage{url}
+\usepackage{indentfirst}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+
+\title{\bf Weak inverse problem of calculus of variations for geodesic mappings and relation to harmonic maps.}
+
+\author{Stanislav Hronek\textsuperscript{1}}
+
+\maketitle
+\thispagestyle{fancy}
+
+\begin{center}
+\textsuperscript{1}Faculty of natural sciences, Masaryk university,\\
+ Kotlářská 2, 602 00 Brno.\\
+
+
+\end{center}
+
+\vspace{1cm}
+
+{\bf Abstract:} 
+
+
+
+ In this paper we will examine the difference between harmonic and geodesic mappings. The importance of harmonic maps in physical theories is summarized in the article \cite{mis}.
+
+\begin{center}
+{\bf 1. Introduction and motivation}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Nemente:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%{\Large{Inverzní problém pro geodetická zobrazení}}\\\\
+
+\begin{center}
+{\bf 2. Geodesic mappings and basic setting}
+\end{center}
+Let us start with geodesic mappings of manifolds with affine connections. For the theory of geodesic mappings we refer to \cite{mik}. Because geodesics on manifolds are characterized by the symmetric part of the connection only, we can restrict ourselves to torsion-free manifolds with affine connections, i.e from now on, we assume that all connections under consideration are symmetric. Consider manifolds with affine connection  $(M,\,^M\nabla)$ a $(N,\,^N\nabla)$ and a map between them $\phi: (M,\,^M\nabla)\longrightarrow(N,\,^N\nabla)$. This map is said to be a geodesic map if
+\begin{enumerate}
+    \item  $\phi$ is a diffeomorphism of $M$ onto $N$; and
+    \item the image under $\phi$ of any geodesic arc in $M$ is a geodesic arc in $N$; and
+    \item the image under the inverse function $\phi ^−1$ of any geodesic arc in $N$ is a geodesic arc in $M$.
+\end{enumerate}
+In our paper we will generalize this definition a little, we will give up the assumptions $1.$ and $3.$ meaning instead of diffeomorphisms we will be working with immersion, which can then have applications to string theory. Mathematically speaking a mapping $\phi: (M,\,^M\nabla)\longrightarrow(N,\,^N\nabla)$, $(dim M\leq dim N)$ is geodesic if $x(t)$ is a geodesic curve in $(M,\,^M\nabla)$, then $\phi \circ x(t)$ is a geodesic curve in $(N,\,^N\nabla)$. For solving the inverse problem of calculus of variation we would like to use the well established formalism of calculus of variations on fibred manifolds, let us consider graphs of curves instead of the curves themselves, meaning instead of using a curve $x(t)$ we will work with its graph $c(t)=(t,\,x(t))$, which we will consider as a point in a fibred space  $(R\times M,\pi_1,M)$. The fibred space for the whole problem will be $(Y,\pi,R)=(R\times M\times N,\pi,R\times M)$, which has dimension $m+n+1$. The mapping $\phi\circ c: R\ni t \rightarrow \phi\circ c(t)=(t,x(t),\phi(x(t))$ is a section of the projection $\pi_1\circ\pi$ and is the graph of the image of the curve $t\rightarrow x(t)$ by the mapping $\phi$. The advantages of this formalism are that we need only one parameter for both geodesic curves, which will simplify our equations, also it will be easier to generalize to mappings between spaces of arbitrary dimension not just immersions as in our case. From the simple definition of a geodesic mappings one can derive a set of geodesic equations which will serve as conditions for the mapping $\phi$ to be a geodesic mapping. Let us write out the equations in coordinate systems $(t, x^i, \phi^\sigma)$ on the total space and adapted system on the basis $(t, x^i)$. In these coordinate systems the affine connections $^M\nabla$ respectively $^N\nabla$ have components denoted by $^M\Gamma^h_{ij}$ respectively $^N\Gamma^\mu_{\nu\lambda}$. One of the advantages of using the fibred manifold formalism will be now apparent, we only need one parameter $t$ for geodesic curves and their images. The equations for a geodesic curve $x(t)$ in $M$ and a geodesic curve $y(t)$ in N are
+\begin{align*}
+\ddot{x}^h+\,^M\Gamma^h_{ij}\dot{x}^i\dot{x}^j&=0,\\
+\ddot{y}^\sigma+\,^N\Gamma^\sigma_{\mu\nu}\dot{y}^\mu\dot{y}^\nu&=0,
+\end{align*}
+$$
+i,j,l=1,\ldots,m=dim(M) \quad \mu,\nu,\lambda=1,\ldots,n=dim(N),
+$$
+For a geodesic mapping $\phi$ the geodesic curve $y(t)$ is the image of $x(t)$ by $\phi$, substituting  $y(t)=\phi(x(t))$ in the second equation we get
+\begin{align*}
+\frac{{\rm d}}{{\rm d}t}\left(\phi^\mu_l\dot{x}^l\right)+^N\Gamma^\mu_{\nu\lambda}\phi^\nu_i\dot{x}^i\phi^\lambda_j\dot{x}^j&=0,
+\end{align*}
+
+
+where we used the chain rule in the second equation $\frac{{\rm d}}{{\rm d}t}(\phi^\mu(x^l(t)))=\phi^\mu_l\dot{x}^l$. Computing the derivative in the second equation and then substituting for the second derivative from the first we get
+$$
+\frac{{\rm d}}{{\rm d}t}\left(\phi^\mu_l\dot{x}^l\right)+^N\Gamma^\mu_{\nu\lambda}\phi^\nu_i\dot{x}^i\phi^\lambda_j\dot{x}^j=\phi^\mu_{kl}\dot{x}^k\dot{x}^l+\phi^\mu_l\ddot{x}^l+^N\Gamma^\mu_{\nu\lambda}\phi^\nu_i\dot{x}^i\phi^\lambda_j\dot{x}^j=0,
+$$
+$$
+\phi^\mu_{kl}\dot{x}^k\dot{x}^l - ^M\Gamma^h_{ij}\dot{x}^i\dot{x}^j\phi^\mu_h+^N\Gamma^\mu_{\nu\lambda}\phi^\nu_i\dot{x}^i\phi^\lambda_j\dot{x}^j=\dot{x}^i\dot{x}^j\left(\phi^\mu_{ij}-^M\Gamma^h_{ij}\phi^\mu_h+^N\Gamma^\mu_{\nu\lambda}\phi^\nu_i\phi^\lambda_j\right),
+$$
+\begin{equation}
+\label{rce}
+\phi^\sigma_{ij}-^M\Gamma^k_{ij}\phi^\sigma_k+^N\Gamma^\sigma_{\alpha\lambda}\phi^\alpha_i\phi^\lambda_j=0.
+\end{equation}
+What we get is a condition for $\phi$ to be a geodesic mapping. The second part of interest are harmonic mappings.
+
+\begin{center}
+{\bf 3. Harmonic mappings}
+\end{center}
+The basics of harmonic mappings can be found in \cite{ura}. The main change from geodesic mappings is that harmonic mappings are defined on Riemannian manifolds, i.e manifolds endowed with a metric. We say that a mapping $\phi$ between two Riemannian manifolds $(M,g)$ and $(N,h)$ is harmonic if it is a stationary (extremal) point of the energy functional.
+$$
+E(\phi)=\int_M \frac{1}{2}Tr_g(\phi^* h) \omega_0,
+$$
+where $\omega_0$ is the volume element on $M$ corresponding to the metric tensor $g$. Euler-Lagrange equations of this functional yields formally the same equation as for geodesic mappings (\ref{rce}), with the difference that for harmonic mappings the connections are metric connections.
+The Lagrange function in the chosen coordinate system $(x^i,\phi^\sigma)$ has the following form
+$$
+L=\frac{1}{2}g^{ij}h_{\alpha\lambda}\phi^\alpha_i\phi^\lambda_j
+$$
+Its Euler-Lagrange equations are as follows
+$$
+{\rm d}_k\frac{\partial L}{\partial \phi^\sigma_k}=\frac{\partial L}{\partial \phi^\sigma}
+$$
+$$
+\frac{1}{2}{\rm d}_k\left[g^{ij}h_{\alpha\lambda}\left(\phi^\lambda_j\delta^k_i\delta^\alpha_\sigma+\phi^\alpha_i\delta^\lambda_\sigma\delta^k_j\right)\right]=\frac{1}{2}g^{ij}h_{\alpha\lambda,\sigma}\phi^\alpha_i\phi^\lambda_j
+$$
+$$
+{\rm d}_k\left[g^{kj}h_{\sigma\lambda}\phi^\lambda_j\right]=\frac{1}{2}g^{ij}h_{\alpha\lambda,\sigma}\phi^\alpha_i\phi^\lambda_j
+$$
+$$
+g^{kj}_{\,\,\,\,,k}h_{\sigma\lambda}\phi^\lambda_j+g^{kj}h_{\sigma\lambda,\alpha}\phi^\alpha_k\phi^\lambda_j+g^{kj}h_{\sigma\lambda}\phi^\lambda_{kj}=\frac{1}{2}g^{ij}h_{\alpha\lambda,\sigma}\phi^\alpha_i\phi^\lambda_j
+$$
+$$
+g^{ij}h_{\sigma\nu}\phi^\sigma_{ij}+g^{ij}\phi^\alpha_i\phi^\lambda_j\left(h_{\sigma\lambda,\alpha}-\frac{1}{2}h_{\alpha\lambda,\sigma}\right)+g^{kj}_{\,\,\,\,,k}h_{\sigma\nu}\phi^\sigma_j=0
+$$
+$$
+g^{ij}h_{\sigma\nu}\phi^\sigma_{ij}+g^{ij}\phi^\alpha_i\phi^\lambda_j\left(\frac{1}{2}h_{\sigma\lambda,\alpha}+\frac{1}{2}h_{\sigma\alpha,\lambda}-\frac{1}{2}h_{\alpha\lambda,\sigma}\right)+g^{kj}_{\,\,\,\,,k}h_{\sigma\nu}\phi^\sigma_j=0
+$$
+%prejmenovani sigma->nu
+$$
+g^{ij}h_{\sigma\nu}\left(\phi^\sigma_{ij}-^M\Gamma^k_{ij}\phi^\sigma_k+^N\Gamma^\sigma_{\alpha\lambda}\phi^\alpha_i\phi^\lambda_j\right)=0,
+$$
+where in the last step we used an expression for the metric trace of Christoffel symbols $g^{ij}\Gamma^k_{ij}=-g^{kl}_{\,\,\,\,,l}$ and also $(h_{\nu\lambda,\alpha}-\frac{1}{2}h_{\alpha\lambda,\nu})\phi^\alpha_i\phi^\lambda_j=
+\frac{1}{2}(h_{\nu\lambda,\alpha}+h_{\nu\alpha,\lambda}-h_{\alpha\lambda,\nu})\phi^\alpha_i\phi^\lambda_j$. As mentioned above we get the same equation with the only difference being affine connections on one hand and metric on the other. The similarities suggest the following question: what is the connection between variationality of equation (\ref{rce}), i.e if equation (\ref{rce}) comes from a variational principle, and the corresponding connections being metric ?
+
+\begin{center}
+{\bf 4. Weak inverse problem of calculus of variations}
+\end{center}
+To answer this question we will start with the equations (\ref{rce}) assume that the connections are affine and not necessary metric and solve the inverse problem of calculus of variations. From the equations it is obvious that they are not variational by themselves, meaning we need to impose and solve the weak inverse problem. To do that we multiply the equation by a multiplier $B^{ij}_{\sigma\nu}(x^k,\phi^\mu)$ and assume it does not depend on the derivatives of the basis and fibre coordinates, which is usually the case. We associate a dynamical $(m+1)$-form with the equation, this form is the following $E=E_\nu\omega^\nu\wedge\omega_0$.
+\begin{equation}
+\label{EL}
+E_\nu=B_{\sigma\nu}^{ij}\left(\phi^\sigma_{ij}-^M\Gamma^k_{ij}\phi^\sigma_k+^N\Gamma^\sigma_{\alpha\lambda}\phi^\alpha_i\phi^\lambda_j\right).
+\end{equation}
+%%
+%komentar o indexech i<j je to v pocitaci a v kapitole 14
+%%
+Again using the logic that we are studying geodesic equations and the connections and their components are supposed to be symmetric we can assume the multiplier is also symmetric in the upper indices $i, j$.
+
+The conditions for this form to be variational are called Helmholtz conditions of variationality, which are of the following form (derivation can be found in \cite{kru})
+\begin{align}
+\label{1HP}
+\frac{\partial E_\nu}{\partial \phi^\mu_{lp}}-\frac{\partial E_\mu}{\partial \phi^\nu_{lp}}&=0,\\
+\label{2HP}
+\frac{\partial E_\nu}{\partial \phi^\mu_{l}}+\frac{\partial E_\mu}{\partial \phi^\nu_{l}}-2{\rm d}_p\frac{\partial E_\mu}{\partial \phi^\nu_{lp}}&=0,\\
+\label{3HP}
+\frac{\partial E_\nu}{\partial \phi^\mu}-\frac{\partial E_\mu}{\partial \phi^\nu}+{\rm d}_l\frac{\partial E_\mu}{\partial \phi^\nu_{l}}-{\rm d}_l{\rm d}_p\frac{\partial E_\mu}{\partial \phi^\nu_{lp}}&=0.
+\end{align}
+%Poznamenejme proč v tomto případě můžeme použít Einstenovu sumační symboliku. Funkce $\phi^\sigma_{ij}$ jsou prvky prostoru $J^2(M\times N\times R)$, vzhledem k záměnosti druhých parciálních derivací platí pro indexy $1\leq i\leq j\leq m$. Chceme-li použít Einstenovu sumační symboliku musí indexy procházet přes všechny možné hodnoty, jedná se tedy o nahrazení
+%$$
+%\sum_{i\leq j}f^{ij}\phi^{\sigma}_{ij}=\sum_{ij}\frac{1}{N(ij)}f^{ij}\phi^{\sigma}_{ij},
+%$$
+%kde $N(ij)=\frac{N_i!N_j!}{2}$ a $N_i$ resp. $N_j$ počet výskytu indexů $i$ resp. $j$ ve dvojici $(ij)$. Naopak pří nahrazení parciálních derivací dostaneme opačný koeficient 
+%$$
+%\frac{\partial E_\mu}{\partial \phi^\nu_{lp}}\Longrightarrow N(lp)\frac{\partial E_\mu}{\partial \phi^\nu_{lp}},
+%$$
+%kde první výraz je myšlen jako parciální derivace se všemi indexy $(lp)$ a druhý pouze s $l\leq p$.
+%V Helmholtzových podmínkách se tyto faktory podělí a můžeme tedy vše zapsat pomocí Einstenovy sumační symboliky a bez těchto faktorů.
+From the first condition we get symmetry of the multiplier B in the lower indices
+$$
+B^{ij}_{\sigma\nu}=B^{ij}_{\nu\sigma}.
+$$
+Writing out the second condition we get 
+\begin{align*}
+&-^M\Gamma^k_{ij}B^{ij}_{\sigma\nu}\delta_\mu^\sigma\delta^l_k
++^N\Gamma^\sigma_{\alpha\lambda}B^{ij}_{\sigma\nu}\left(\delta^\alpha_\mu\delta^l_i\phi^\lambda_j+\delta^\lambda_\mu\delta^l_j\phi^\alpha_i\right)
+-^M\Gamma^k_{ij}B^{ij}_{\sigma\mu}\delta_\nu^\sigma\delta^l_k
++^N\Gamma^\sigma_{\alpha\lambda}B^{ij}_{\sigma\mu}\left(\delta^\alpha_\nu\delta^l_i\phi^\lambda_j+\delta^\lambda_\nu\delta^l_j\phi^\alpha_i\right)=\\
+&=2{\rm d}_p\left(B^{ij}_{\sigma\mu}\delta^\sigma_\nu\delta^{lp}_{ij}\right)=2\left(\frac{\partial B^{lp}_{\mu\nu}}{\partial x^p}+\frac{\partial B^{lp}_{\mu\nu}}{\partial \phi^\lambda}\phi^\lambda_p\right),
+\\
+&-B^{ij}_{\mu\nu}\,^M\Gamma^l_{ij}+\phi^\lambda_j\left(^N\Gamma^\sigma_{\mu\lambda}B^{lj}_{\sigma\nu}+^N\Gamma^\sigma_{\nu\lambda}B^{lj}_{\sigma\mu}\right)=\left(\frac{\partial B^{lp}_{\mu\nu}}{\partial x^p}+\frac{\partial B^{lp}_{\mu\nu}}{\partial \phi^\lambda}\phi^\lambda_p\right).
+\end{align*}
+Because at the beginning we assumed B does not depend on derivatives the equation splits into a polynomial form in the derivatives of $\phi$. Setting each coefficient to zero results into two conditions.
+\begin{align}
+\label{HP21}
+-B^{ij}_{\mu\nu}\,^M\Gamma^l_{ij}&=\frac{\partial B^{lp}_{\mu\nu}}{\partial x^p}.
+\\
+\label{HP22}
+^N\Gamma^\sigma_{\mu\lambda}B^{ij}_{\sigma\nu}+^N\Gamma^\sigma_{\nu\lambda}B^{ij}_{\sigma\mu}&=\frac{\partial B^{ij}_{\mu\nu}}{\partial \phi^\lambda},
+\end{align}
+These conditions already tell us something about the form of the multiplier B. The second equation is the condition for a connection $^N\Gamma^\sigma_{\mu\lambda}$ to be to be compatible with a  metric tensor, with components $B^{ij}_{\mu\nu}$ for a fixed choice of indices $i,j$. Noticing that the equations separate, in the sense that in the first there is a derivative with respect to $x^p$ and in the second with respect to $\phi^\lambda$, we can guess that the multiplier $B$ separates also into the following form
+$$
+B^{ij}_{\sigma\nu}=g^{ij}(x^k)h_{\sigma\nu}(\phi^\mu),
+$$
+for some functions $g^{ij}(x^k)$ and $h_{\sigma\nu}(\phi^\mu)$, which we will interpret later. This is just our guess and not the most general solution for the problem.
+This would be the most simple choice but we can be more general and allow the functions $h_{\sigma\nu}$ to also depend on $x^k$ the reasoning is the following. The second equation tells us that $h_{\sigma\nu}$ are components of a metric tensor of the connection $^N\Gamma^\sigma_{\mu\lambda}$ for a fixed choice of $i,j$. Fixing $i,j$ means that we stay at one particular fibre $\pi^{-1}(X)$ of the space $(Y,\pi,X)$, so we have fixed the basis coordinate $x^k$. If we choose another pair of $i,j$ we move to another fibre and the connection $^N\Gamma^\sigma_{\mu\lambda}$ is also metric but the metric can be different. We can have a different metric tensor $h$ in each fibre and we allow the functions $h_{\sigma\nu}$ to also depend on $x^k$ for this very reason. %zlepsit 
+For a general choice of indices $i,j$ the multiplier will be of the form
+$$
+B^{ij}_{\sigma\nu}=g^{ij}(x^k)h_{\sigma\nu}(x^k,\phi^\mu).
+$$
+Now let us focus on what kind of product we are dealing with, we want to interpret the functions as components of geometric objects. $B^{ij}_{\sigma\nu}$ (for a fixed point  $(x,\phi)=(x^k,phi^\mu)$ of the space total space $M\times N$) are components of tensor product of the metric tensor $g(x)\in S^2_0(T_{(x,\phi)}M\times N)$ and metric tensor  $h(x,\phi)\in T_{(x,\phi)M\times N}$, $B=g\otimes h$. The matrix $B$ of the type  $mn/mn$, which represent this tensor product we can write using matric multiplication as 
+$B =CD=(g\otimes I_n)(I_m\otimes h)$, where $I_m$, resp. $I_n$ are unit matrices of the type $m/m$, resp. $n/n$ (viz [odkaz na nějakou algebru]). Now we need to justify calling $g$ and $h$ metric tensor, their symmetry follows from the Helmholtz conditions and their regularity follows from the regularity of the matrix $B$, which is regular because of the nature of the inverse problem. In particular the regularity can be seen using the above formula for matric multiplication.
+$$
+B = (g\otimes I_n)(I_m\otimes h)\longrightarrow det(B)=det\left(g\otimes h\right)=det(g)^mdet(h)^n
+$$
+
+
+We know that the second equation assures that the connection $^N\Gamma^\sigma_{\mu\lambda}$ comes from a metric $h$, which can be different in each fibre (for different $x$). We can calculate how it changes between fibres from the first equation. We substitute for $B$ into the first equation and simplify
+\begin{align*}
+&-B^{ij}_{\mu\nu}\,^M\Gamma^l_{ij}=\frac{\partial B^{lp}_{\mu\nu}}{\partial x^p}\\
+&-g^{ij}h_{\mu\nu}\,^M\Gamma^l_{ij}=g^{lp}_{\,\,\,,p}h_{\mu\nu}+h_{\mu\nu,p}g^{lp}\\
+&h_{\mu\nu}\left(g^{ij}\,^M\Gamma^l_{ij}+g^{lp}_{\,\,\,,p}\right)=-h_{\mu\nu,p}g^{lp}
+\end{align*}
+where $g^{lp}_{\,\,\,,p}$ is actually a trace of connection induced by the metric tensor $g$ let us denote it by $^M\bar{\nabla}$, meaning the equation is a difference of traces of two connections. Originally we assumed the space $M$ is only endowed with an affine connection, however we see there also supposedly exists a metric $g$, but that is no surprise because we know every smooth manifold admits a metric. We see that the dependency of metric tensor $h$ on the basis coordinate $x$ is given by the difference of traces of connections on the space $M$.
+We can then express the relation between the connection components 
+$$
+^M\Gamma^l_{ij}= \, ^M\bar{\Gamma}^l_{ij}+S^l_{ij},
+$$
+where $S^l_{ij}$ is a tensor which satisfies
+$$
+g^{ij}S^l_{ij}=-h^{\mu\nu}h_{\mu\nu,p}g^{lp}.
+$$
+This tensor does not need to be symmetric in general. Its trace is given by the way how the metric $h$ changes between fibres, if it is constant then the connection $^M\Gamma$ differs from a metric connection only by a traceless tensor. One class of solutions for the tracelessnes condition are antisymmetric tensors, two connections which components differ by an antisymmetric have the same geodesic curves.
+
+Let us now examine the last remaining Helmholtz condition. For the purpose of shortening the calculation we denote partial derivatives by $\partial_\mu=\frac{\partial}{\partial \phi^\mu}$ and $\partial_i=\frac{\partial}{\partial x^i}$.
+
+We can again write the conditions into a polynomial form
+\begin{align*}
+&\phi^\sigma_{ij}\left[\partial_\nu B^{ij}_{\sigma\mu}-\partial_\mu B^{ij}_{\sigma\nu}-\partial_\sigma B^{ij}_{\mu\nu}+B^{ji}_{\alpha\nu}\, ^N\Gamma^\alpha_{\mu\sigma}+B^{ij}_{\alpha\nu}\, ^N\Gamma^\alpha_{\sigma\mu}\right]\\
+&+\phi^\alpha_i\phi^\lambda_j\left[\partial_\nu (B^{ij}_{\sigma\mu})^N\Gamma^\sigma_{\alpha\lambda}+B^{ij}_{\sigma\mu}\partial_\nu^N\Gamma^\sigma_{\alpha\lambda}-\partial_\mu(B^{ij}_{\sigma\nu})^N\Gamma^\sigma_{\alpha\lambda}-B^{ij}_{\sigma\nu}\partial_\mu^N\Gamma^\sigma_{\alpha\lambda}+\partial_\alpha(B^{ij}_{\sigma\nu})^N\Gamma^\sigma_{\mu\lambda}+B^{ij}_{\sigma\nu}\partial_\alpha^N\Gamma^\sigma_{\mu\lambda}\right.\\
+&\left.+\partial_\lambda(B^{ij}_{\sigma\nu})^N\Gamma^\sigma_{\alpha\mu}+B^{ij}_{\sigma\nu}\partial_\lambda\,^N\Gamma^\sigma_{\alpha\mu}-\partial_\lambda\partial_\alpha B^{ij}_{\mu\nu}\right]\\
+&+\phi^\sigma_k\left[^M\Gamma^k_{ij}\left(\partial_\mu B^{ij}_{\sigma\nu}-\partial_\nu B^{ij}_{\sigma\mu}-\partial_\sigma B^{ij}_{\mu\nu}\right)
++2\partial_l\left(B^{lk}_{\lambda\nu}\right)\,^N\Gamma_{\mu\sigma}^\lambda-2\partial_p\partial_\sigma B^{kp}_{\mu\nu}\right]\\
+&-\partial_l(B^{ij}_{\mu\nu})^M\Gamma^l_{ij}-B^{ij}_{\mu\nu}\partial_l^M\Gamma^l_{ij}-\partial_l\partial_pB^{lp}_{\mu\nu}=0,
+\end{align*}
+from requiring that all the polynomial coefficients vanish we get four conditions 
+\begin{align}
+\label{HP31}
+&\partial_\nu B^{ij}_{\sigma\mu}-\partial_\mu B^{ij}_{\sigma\nu}-\partial_\sigma B^{ij}_{\mu\nu}+B^{ji}_{\alpha\nu}\, ^N\Gamma^\alpha_{\mu\sigma}+B^{ij}_{\alpha\nu}\, ^N\Gamma^\alpha_{\sigma\mu}=0\\
+\nonumber
+&\partial_\nu (B^{ij}_{\sigma\mu})^N\Gamma^\sigma_{\alpha\lambda}+B^{ij}_{\sigma\mu}\partial_\nu^N\Gamma^\sigma_{\alpha\lambda}-\partial_\mu(B^{ij}_{\sigma\nu})^N\Gamma^\sigma_{\alpha\lambda}-B^{ij}_{\sigma\nu}\partial_\mu^N\Gamma^\sigma_{\alpha\lambda}+\partial_\alpha(B^{ij}_{\sigma\nu})^N\Gamma^\sigma_{\mu\lambda}+B^{ij}_{\sigma\nu}\partial_\alpha^N\Gamma^\sigma_{\mu\lambda}\\
+\label{HP32}
+&+\partial_\lambda(B^{ij}_{\sigma\nu})^N\Gamma^\sigma_{\alpha\mu}+B^{ij}_{\sigma\nu}\partial_\lambda\,^N\Gamma^\sigma_{\alpha\mu}-\partial_\lambda\partial_\alpha B^{ij}_{\mu\nu}=0\\
+\label{HP33}
+&^M\Gamma^k_{ij}\left(\partial_\mu B^{ij}_{\sigma\nu}-\partial_\nu B^{ij}_{\sigma\mu}-\partial_\sigma B^{ij}_{\mu\nu}\right)
++2\partial_l\left(B^{lk}_{\lambda\nu}\right)\,^N\Gamma_{\mu\sigma}^\lambda-2\partial_p\partial_\sigma B^{kp}_{\mu\nu}=0
+\\
+\label{HP34}
+&-\partial_l(B^{ij}_{\mu\nu})^M\Gamma^l_{ij}-B^{ij}_{\mu\nu}\partial_l^M\Gamma^l_{ij}-\partial_l\partial_pB^{lp}_{\mu\nu}=0.
+\end{align}
+The equation (\ref{HP31}) provides us with the same information as (\ref{HP22}) that being, the connections $^N\nabla$ is metric with the metric tensor $h$ especially we can see that equation (\ref{HP31}) 
+
+\begin{equation}
+\label{vysl1}
+\frac{1}{2}\left(\partial_\mu h_{\sigma\nu}+\partial_\sigma h_{\mu\nu}-\partial_\nu h_{\sigma\mu}\right)=h_{\alpha\nu}\,^N\Gamma^\alpha_{\sigma\mu}.
+\end{equation}
+
+
+Next we will examine whether the remaining equations are dependent or not. Right away we can see that the equation (\ref{HP34}) is just a derivative of (\ref{HP21}) with respect to $x^l$, in our notation it is the application of the operator $\partial_l$. Now we substitute equation (\ref{HP21}) into (\ref{HP33}) and get
+$$
+^M\Gamma^k_{ij}\left(\partial_\mu B^{ij}_{\sigma\nu}-\partial_\nu B^{ij}_{\sigma\mu}-\partial_\sigma B^{ij}_{\mu\nu}\right)-2\,^N\Gamma^\lambda_{\mu\sigma}B^{ij}_{\lambda\nu}\,^M\Gamma^k_{ij}+2\,^M\Gamma^k_{ij}\partial_\sigma B^{ij}_{\mu\nu}=0,
+$$
+$$
+^M\Gamma^k_{ij}\left(\partial_\mu B^{ij}_{\sigma\nu}-\partial_\nu B^{ij}_{\sigma\mu}+\partial_\sigma B^{ij}_{\mu\nu}\right)=2\,^N\Gamma^\lambda_{\mu\sigma}B^{ij}_{\lambda\nu}\,^M\Gamma^k_{ij}.
+$$
+Considering that for at least one choice of indices $i,j,k$ the expressions $^M\Gamma^k_{ij}$ are non-zero, we can divide the equation and we get equation (\ref{HP31}). We find that the equations \ref{HP31}) and (\ref{HP33}) are dependent. The condition (\ref{HP22}) is
+\begin{equation}
+\label{dB}
+^N\Gamma^\sigma_{\nu\lambda}B^{ij}_{\sigma\mu}+\,^N\Gamma^\sigma_{\mu\lambda}B^{ij}_{\sigma\nu}=\partial_\lambda B^{ij}_{\mu\nu}.
+\end{equation}
+Substituting for the left hand side from the equation (\ref{HP31}) we arrive at the identity
+$$
+\frac{1}{2}\left(\partial_\lambda B^{ij}_{\mu\nu}+\partial_\nu B^{ij}_{\mu\lambda}-\partial_\mu B^{ij}_{\lambda\nu}\right)
++
+\frac{1}{2}\left(\partial_\lambda B^{ij}_{\mu\nu}+\partial_\mu B^{ij}_{\nu\lambda}-\partial_\nu B^{ij}_{\lambda\mu}\right)
+=\partial_\lambda B^{ij}_{\mu\nu}.
+$$
+From which we see that also equations (\ref{HP22}) and (\ref{HP31}) are dependent. Let us write the whole system of independent equations from the Helmholtz conditions of variationality of the dynamical form (\ref{EL}).
+\begin{align}
+\label{NHP11}
+&B^{ij}_{\sigma\nu}=B^{ij}_{\nu\sigma}\\
+\label{NHP21}
+&-B^{ij}_{\mu\nu}\,^M\Gamma^l_{ij}=\partial_p B^{lp}_{\mu\nu}\\
+\label{NHP31}
+&\frac{1}{2}\left(\partial_\mu B^{ij}_{\sigma\nu}+\partial_\sigma B^{ij}_{\mu\nu}-\partial_\nu B^{ij}_{\sigma\mu}\right)=B^{ij}_{\alpha\nu}\,^N\Gamma^\alpha_{\sigma\mu}.\\
+\nonumber
+&\partial_\nu (B^{ij}_{\sigma\mu})^N\Gamma^\sigma_{\alpha\lambda}+B^{ij}_{\sigma\mu}\partial_\nu^N\Gamma^\sigma_{\alpha\lambda}-\partial_\nu(B^{ij}_{\sigma\nu})^N\Gamma^\sigma_{\alpha\lambda}-B^{ij}_{\sigma\nu}\partial_\mu^N\Gamma^\sigma_{\alpha\lambda}+\partial_\alpha(B^{ij}_{\sigma\nu})^N\Gamma^\sigma_{\mu\lambda}+B^{ij}_{\sigma\nu}\partial_\alpha^N\Gamma^\sigma_{\mu\lambda}\\
+\label{NHP32}
+&+\partial_\lambda(B^{ij}_{\sigma\nu})^N\Gamma^\sigma_{\alpha\mu}+B^{ij}_{\sigma\nu}\partial_\lambda\,^N\Gamma^\sigma_{\alpha\mu}-\partial_\lambda\partial_\alpha B^{ij}_{\mu\nu}=0.
+\end{align}
+So far from these conditions we managed to show that the following must hold.
+\begin{align*}
+&B^{ij}_{\sigma\nu}=B^{ji}_{\sigma\nu}=B^{ij}_{\nu\sigma}\\
+&B^{ij}_{\sigma\nu}(x^k,\phi^\mu)=g^{ij}(x^k)h_{\sigma\nu}(x^k,\phi^\mu)\\
+&\frac{1}{2}\left(\partial_\mu h_{\sigma\nu}+\partial_\sigma h_{\mu\nu}-\partial_\nu h_{\sigma\mu}\right)=h_{\alpha\nu}\,^N\Gamma^\alpha_{\sigma\mu}.
+\end{align*}
+Now we will focus on the meaning of equation (\ref{NHP32}) by substituting for every expression of the type $\partial_\lambda B^{ij}_{\mu\nu}$ from (\ref{dB}), for shortening the calculations we also substitute for $B$, $B^{ij}_{\sigma\nu}=g^{ij}h_{\sigma\nu}$ and divide the equation by $g^{ij}$.
+\begin{align*}
+&^N\Gamma^\sigma_{\alpha\lambda}\left(\,^N\Gamma^\beta_{\sigma\nu}h_{\beta\mu}+^N\Gamma^\beta_{\mu\nu}h_{\beta\sigma}\right)
++h_{\sigma\nu}\partial_\nu\,^N\Gamma^\sigma_{\alpha\lambda}-^N\Gamma_{\alpha\lambda}^\sigma\left(\,^N\Gamma^\beta_{\nu\mu}h_{\beta\sigma}+^N\Gamma_{\sigma\mu}^\beta h_{\beta\nu}\right)-h_{\sigma\nu}\partial_\mu\,^N\Gamma^\sigma_{\alpha\lambda}\\
+&+^N\Gamma^\sigma_{\mu\lambda}\left(\,^N\Gamma^\beta_{\nu\alpha}h_{\beta\sigma}+^N\Gamma^\beta_{\sigma\alpha}h_{\beta\nu}\right)
++h_{\sigma\nu}\partial_\alpha\,^N\Gamma^\sigma_{\nu\lambda}+^N\Gamma^\sigma_{\alpha\mu}\left(\,^N\Gamma^\beta_{\nu\lambda}h_{\beta\sigma}+^N\Gamma^\beta_{\sigma\lambda}h_{\beta\nu}\right)+h_{\sigma\nu}\partial_\lambda^N\Gamma^\sigma_{\alpha\mu}\\
+&-h_{\beta\mu}\partial_\alpha\,^N\Gamma^\beta_{\nu\lambda}-^N\Gamma^\beta_{\nu\lambda}\left(^N\Gamma^\sigma_{\mu\alpha}h_{\sigma\beta}+^N\Gamma^\sigma_{\beta\alpha}h_{\sigma\mu}\right)-h_{\beta\nu}\partial_\alpha\,^N\Gamma^\beta_{\mu\lambda}-^N\Gamma^\beta_{\mu\lambda}\left(^N\Gamma^\sigma_{\nu\alpha}h_{\sigma\beta}+^N\Gamma^\sigma_{\beta\alpha}h_{\sigma\nu}\right)=0.\\
+\end{align*}
+We rearrange the terms so that we can put the metric coefficients with the same indices before the brackets and put negative terms on the other side of the equation.
+\begin{align*}
+&
+{\scriptstyle h_{\beta\mu}\left[\partial_\nu\,^N\Gamma^\beta_{\alpha\lambda}-\partial_\alpha\,^N\Gamma^\beta_{\nu\lambda}+^N\Gamma^\sigma_{\alpha\lambda}\,^N\Gamma^\beta_{\sigma\nu}-^N\Gamma^\sigma_{\nu\lambda}\,^N\Gamma^\beta_{\sigma\alpha}\right]=h_{\sigma\nu}\left[\partial_\mu\,^N\Gamma^\sigma_{\alpha\lambda}-\partial_\lambda\,^N\Gamma^\sigma_{\alpha\mu}+^N\Gamma^\beta_{\alpha\lambda}\,^N\Gamma^\sigma_{\beta\mu}-^N\Gamma^\beta_{\mu\alpha}\,^N\Gamma^\sigma_{\beta\lambda}\right]}\\
+&h_{\beta\mu}\,R^\beta_{\lambda\nu\alpha}=h_{\sigma\nu}\,R^\sigma_{\alpha\mu\lambda}\longrightarrow R_{\mu\lambda\nu\alpha}=R_{\nu\alpha\mu\lambda}.
+\end{align*}
+We arrived at an identity for the components of the Riemann curvature tensor. Therefore from the last Helmholtz condition we did not find anything new. Except for the equations we examined closely all other were either dependent or resulted in an identity. 
+
+\begin{center}
+{\bf 5. Summary and conclusion}
+\end{center}
+
+We now summarize everything we discovered from the Helmholtz conditions.
+We have the equation
+$$
+\phi^{\sigma}_{ij}- ^M \Gamma^k_{ij}\phi^\sigma_k+^N\Gamma^\sigma_{\alpha\lambda}\phi^\alpha_i\phi^\lambda_j=0,
+$$
+for a geodesic mapping $\phi$. We ask the following question: when is this mapping also harmonic ? Therefore we are solving an inverse problem for the associated dynamical form $E=E_\nu \omega^\nu\,\wedge\,\omega_0$
+$$
+E_\nu=B^{ij}_{\sigma\nu}\left(\phi^{\sigma}_{ij}- ^M \Gamma^k_{ij}\phi^\sigma_k+^N\Gamma^\sigma_{\alpha\lambda}\phi^\alpha_i\phi^\lambda_j\right)
+$$
+Conditions for variationality are
+\begin{enumerate}
+\item Matrix of functions B is given by the Kronecker product of two matrices 
+$$B=g\otimes h,$$
+where both matrices $g,h$ are regular and symmetric, so they are the components of metric tensors.
+\item Connection $^N\nabla$ is metric and is fiber-wise induced by the metric $h$. Metric $h$ is generally different in each fibre $h_{\sigma\nu}=h_{\sigma\nu}(x^k,\phi^\mu)$. The way in which this metric changes in $x^k$ is given by the connection $^M \nabla$ and metric $g$
+\item For the connection components $^M \nabla$ we have
+$$
+\Gamma^k_{ij}=\bar{\Gamma}^k_{ij}+S^k_{ij},
+$$
+where $S^k_{ij}$ is a tensor whose metric trace by the tensor $g$ relates to the changes of the metric $h$  
+$$
+g^{ij}S^l_{ij}=-h^{\mu\nu}h_{\mu\nu,p}g^{lp}.
+$$
+\end{enumerate}
+Interesting conclusion is that the connection $^M \nabla$ does not necessary need to be metric. It is related with a metric connection of the space $M$ and a metric connection $^N \nabla$. Using these information we can define an equivalence class of connections, whose images of geodesics coincide. We formulate the following theorem which summarizes the calculations, we will formulate it for the special case when the metric $h$ does not depend on $x$.
+\begin{theorem}
+Let $(M,g)$ and $(N,h)$ be two Riemannian manifolds and a mapping between them $\phi: M\rightarrow N$, which is harmonic. Then for every metric connection $\bar{\nabla}$ on $(M,g)$ one can define a class of connections  
+$$
+\left\{\Gamma^k_{ij}=\bar{\Gamma}^k_{ij}+S^k_{ij}, \,\, g^{ij}S^k_{ij}=0 \right\}.
+$$
+Geodesic curves of every connection from one class are mapped onto the same geodesic curves in $(N,h)$ by $\phi$.
+\end{theorem}
+
+\begin{center}
+{\bf References}
+\end{center}
+
+\begin{thebibliography}{10}
+\bibitem{mik} Mikeš, Josef. \emph{Differential geometry of special mappings}. Palacky university, Olomouc 2015
+\bibitem{ura} Hajime Urakawa, \emph{Calculus of Variations and Harmonic Maps}. American Mathematical Society 1993
+\bibitem{kru}
+O.~Krupková: \emph{The Geometry of Ordinary Variational Equations}.
+Lecture Notes in Mathematics 1678. Springer Verlag, Berlin,
+Heidelberg 1997.
+\bibitem{mis}
+Charles W. Misner,
+Harmonic maps as models for physical theories
+Phys. Rev. D 18, 4510  1978
+\end{thebibliography}
+
+\end{document}
